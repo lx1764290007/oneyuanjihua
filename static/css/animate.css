@@ -1,0 +1,24 @@
+#clound {
+    height: 170vw;
+}
+
+#mountain {
+    height: 40vw;
+    background: url('../imgs/mountain.png') no-repeat;
+    position: relative;
+    top: -142vw;
+    background-position: left top;
+    background-size: 100% 100%;
+}
+
+#grass {
+    background: url('../imgs/grass.png') no-repeat;
+    background-position: left top;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 99;
+}
