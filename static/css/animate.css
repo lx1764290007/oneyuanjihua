@@ -1,5 +1,5 @@
 #clound {
-    height: 170vw;
+    height: 165vw;
 }
 
 #mountain {
@@ -21,4 +21,12 @@
     bottom: 0;
     top: 0;
     z-index: 99;
+}
+#box,#tape,#fall-down,#fog {
+    position: absolute;
+    height:100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
