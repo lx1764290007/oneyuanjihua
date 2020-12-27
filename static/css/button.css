@@ -1,0 +1,19 @@
+#next-page {
+    width: 60vw;
+    padding: 4vw 0;
+    background: #fff;
+    color: #569ff3;
+    border-radius: 10vw;
+    margin: 0 auto;
+    position: absolute;
+    top: 83%;
+    text-align: center;
+    z-index: 103;
+    left: 20vw;
+    cursor: pointer;
+    overflow: hidden;
+}
+#next-page:hover {
+    color: #fff;
+    background:#619ce0 ;
+}

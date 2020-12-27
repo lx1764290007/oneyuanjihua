@@ -36,11 +36,15 @@
         <meta name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no, viewport-fit=cover" />
         <link rel="shortcut icon" href="./favicon.ico">
+        <link href="https://cdn.bootcdn.net" rel="dns-prefetch">
         <link href="https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="static/css/bg.css" />
         <link rel="stylesheet" href="static/css/animate.css" />
+        <link rel="stylesheet" href="static/css/button.css" />
         <title>一元计划</title>
         <script src="https://cdn.bootcdn.net/ajax/libs/lottie-web/5.7.5/lottie.min.js" defer async></script>
+        <link rel="prerender" href="./page.html">
+        <link rel="next" href="./page.html">
     </head>
 
     <body>
@@ -50,8 +54,28 @@
         <div id="grass"></div>
         <div id="box"></div>
         <div id="tape"></div>
+        <div id="childs"></div>
         <div id="fall-down"></div>
+        <div id="page">
+
+        </div>
+        <div id="next-page">page2</div>
+
         <script>
+            document.querySelector('body').style.height = window.innerHeight - 1 + 'px';
+            document.getElementById('next-page').addEventListener('click', function (params) {
+                const nextPage = lottie.loadAnimation({
+                    container: document.querySelector("#page"), // the dom element that will contain the animation
+                    renderer: 'svg',
+                    loop: false,
+                    autoplay: true,
+                    path: './static/json/page/跳转第二页效果/渐隐为白后又显示 1秒.json' // the path to the animation json
+                });
+                nextPage.addEventListener('complete', function (params) {
+                    window.location.href = './page.html'
+                })
+
+            })
             window.onload = function () {
                 lottie.loadAnimation({
                     container: document.querySelector("#fog"), // the dom element that will contain the animation
@@ -88,12 +112,16 @@
                     autoplay: true,
                     path: './static/json/建筑物掉落/建筑物掉落.json' // the path to the animation json
                 });
+
+                lottie.loadAnimation({
+                    container: document.querySelector("#yulu"), // the dom element that will contain the animation
+                    renderer: 'svg',
+                    loop: false,
+                    autoplay: true,
+                    path: './第二页/json/语录/语录2 有梦想···.json' // the path to the animation json
+                })
             }
         </script>
     </body>
 
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 6713ae2cfd4be71b78b42f720f8824d0e1075f22
