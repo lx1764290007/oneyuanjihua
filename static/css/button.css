@@ -12,8 +12,9 @@
     left: 20vw;
     cursor: pointer;
     overflow: hidden;
+    transition: border .3s;
 }
-#next-page:hover {
-    color: #fff;
-    background:#619ce0 ;
+#next-page:active {
+    border: 2px solid #569ff3;
+    background: #fff;
 }

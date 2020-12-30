@@ -45,12 +45,14 @@
     </head>
 
     <body>
-
+        <div id="fade-in"></div>
 
         <script>
             document.querySelector('body').style.height = window.innerHeight - 1 + 'px';
             window.onload = function () {
-
+                setTimeout(() => {
+                    document.querySelector('#fade-in').style.display = 'none';
+                }, 1300);
             }
         </script>
     </body>

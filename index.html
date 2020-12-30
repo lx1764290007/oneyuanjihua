@@ -51,26 +51,18 @@
         <div id="tape"></div>
         <div id="childs"></div>
         <div id="fall-down"></div>
-        <div id="page">
-
-        </div>
+        <div id="page"></div>
         <div id="next-page">page2</div>
-
+        <div id="fade-out"></div>
         <script>
             //初始化容器高度
             document.querySelector('body').style.height = window.innerHeight + 'px';
             //跳转按钮监听
             document.getElementById('next-page').addEventListener('click', function (params) {
-                const nextPage = lottie.loadAnimation({
-                    container: document.querySelector("#page"), // the dom element that will contain the animation
-                    renderer: 'svg',
-                    loop: false,
-                    autoplay: true,
-                    path: './static/json/page/跳转第二页效果/渐隐为白后又显示 1秒.json' // the path to the animation json
-                });
-                nextPage.addEventListener('complete', function (params) {
-                    window.location.href = './page.html'
-                })
+                document.getElementById('fade-out').style.display = 'block';
+                setTimeout(() => {
+                    window.location.href = './page.html';
+                }, 1300);
 
             })
             class StartAnimate {
